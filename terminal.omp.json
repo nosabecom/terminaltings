@@ -218,7 +218,7 @@
           "background": "#0077c2",
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
-          "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "trailing_diamond": "\ue0b4 ",
           "style": "diamond",
           "template": " \uf120 {{ .Name }} ",
           "type": "shell"
@@ -226,8 +226,7 @@
         {
           "background": "#003543",
           "foreground": "#ffffff",
-          "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "\ue0b6",
           "options": {
             "time_format": "15:04:05"
           },
