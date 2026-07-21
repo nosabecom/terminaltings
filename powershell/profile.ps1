@@ -35,6 +35,13 @@ if (Get-Module -ListAvailable -Name Microsoft.WinGet.CommandNotFound) {
     Import-Module -Name Microsoft.WinGet.CommandNotFound
 }
 
+# Enable PSReadLine history and plugin predictions in interactive shells.
+if (-not [Console]::IsInputRedirected -and (Get-Module -ListAvailable -Name PSReadLine)) {
+    Import-Module -Name PSReadLine
+    Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+    Set-PSReadLineOption -PredictionViewStyle ListView
+}
+
 # Load the Oh My Posh theme tracked alongside this profile.
 if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
     $poshConfig = Join-Path $HOME '.config\terminal\terminal.omp.json'

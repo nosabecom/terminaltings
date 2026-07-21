@@ -9,6 +9,9 @@ Personal terminal configuration shared across Windows machines.
 - `powershell/local.ps1` — optional untracked machine-specific settings.
 - `.tmux.conf` — shared tmux-compatible configuration used by psmux.
 
+The shared profile enables PSReadLine history/plugin predictions using its
+interactive ListView, and psmux is configured to preserve those settings.
+
 ## PowerShell setup
 
 Clone this repository to `~/.config/terminal`, then make the active PowerShell
@@ -49,3 +52,4 @@ psmux source-file ~/.config/psmux/psmux.conf
 - `\ r` — reload the tracked configuration.
 - `\ s` / `\ w` — open the session / window chooser.
 - `\ d` — detach while leaving the session running.
+- `\ X` — confirm and close the current session.
