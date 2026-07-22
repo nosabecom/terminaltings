@@ -41,6 +41,21 @@ editing the tracked configuration with:
 psmux source-file ~/.config/psmux/psmux.conf
 ```
 
+### btop4win setup
+
+Use Scoop's `btop` package as the single installation. The PowerShell profile
+also aliases `btop4win` to the same executable. Scoop persists the active
+configuration at `~/scoop/persist/btop/btop.conf` across upgrades.
+
+The stable PSMux configuration uses a 2000 ms update interval, disables
+unsupported LibreHardwareMonitor/GPU/temperature probes in the standard build,
+uses a single CPU graph, shows processes rather than services, and pauses
+background redraw while menus are open. Keep `show_io_stat = True` with
+btop4win 1.0.5: the released build has a known crash when that option is false.
+
+Run `btop` normally. If a particularly limited SSH client renders Unicode
+incorrectly, use `btop --tty_on` as a compatibility fallback.
+
 ### Mouse and SSH
 
 Mouse support stays enabled for pane focus, border resizing, clickable window

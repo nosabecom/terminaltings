@@ -35,6 +35,12 @@ if (Get-Module -ListAvailable -Name Microsoft.WinGet.CommandNotFound) {
     Import-Module -Name Microsoft.WinGet.CommandNotFound
 }
 
+# Scoop is the canonical btop4win installation. Keep the upstream executable
+# name working without reintroducing WinGet's broken config/theme path handling.
+if (Get-Command btop.exe -CommandType Application -ErrorAction SilentlyContinue) {
+    Set-Alias -Name btop4win -Value btop.exe -Scope Global
+}
+
 # Enable PSReadLine history and plugin predictions in interactive shells.
 if (-not [Console]::IsInputRedirected -and (Get-Module -ListAvailable -Name PSReadLine)) {
     Import-Module -Name PSReadLine
