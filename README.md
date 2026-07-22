@@ -53,6 +53,10 @@ wheel-to-copy-mode are disabled so SSH programs such as `nvim`, `htop`,
 - Hold `Shift` while dragging to force Windows Terminal text selection when a
   remote program owns the mouse.
 - Use `Ctrl+Shift+C` / `Ctrl+Shift+V` to copy / paste through Windows Terminal.
+- For keyboard-only copying, press `Ctrl+Shift+M` to enter Windows Terminal mark
+  mode, move with the arrow keys, extend with `Shift+Arrow`, then press `Enter`
+  or `Ctrl+Shift+C` to copy. Press `Escape` to cancel.
+- Use `Ctrl+Shift+A` to select the entire terminal buffer.
 - Press `Page Up` or `Home [` to enter PSMux copy mode for pane history.
 - `pwsh-mouse-selection` remains enabled for convenient local PowerShell use.
 
