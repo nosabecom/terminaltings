@@ -88,7 +88,7 @@ Press `Home Home` to send a literal Home key to the active program.
 | `Prefix 1` through `Prefix 9` | Select a numbered window |
 | `Prefix ,` | Rename the current window |
 | `Prefix w` | Open the window and pane chooser |
-| `Prefix &` | Kill the current window |
+| `Prefix &` | Kill the current window immediately, without confirmation |
 
 #### Panes and layouts
 
