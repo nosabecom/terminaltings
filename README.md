@@ -1,13 +1,14 @@
 # Terminal configuration
 
-Personal terminal configuration shared across Windows machines.
+Personal terminal configuration shared across Windows and Linux machines.
 
 ## Contents
 
 - `terminal.omp.json` — Oh My Posh theme, based on Atomic.
 - `powershell/profile.ps1` — shared PowerShell 7 profile.
 - `powershell/local.ps1` — optional untracked machine-specific settings.
-- `.tmux.conf` — shared tmux-compatible configuration used by psmux.
+- `.tmux.conf` — upstream-compatible tmux configuration for Linux.
+- `.psmux.conf` — Windows-specific PSMux configuration.
 
 The shared profile enables PSReadLine history/plugin predictions using its
 interactive ListView, and psmux is configured to preserve those settings.
@@ -26,12 +27,54 @@ if (Test-Path -LiteralPath $sharedProfile) {
 
 The active profile path can be displayed with `$PROFILE`.
 
-## psmux setup
+## Linux tmux setup
+
+Install tmux 3.2 or newer using the Linux distribution's package manager:
+
+```sh
+# Ubuntu or Debian
+sudo apt update && sudo apt install tmux
+
+# Fedora
+sudo dnf install tmux
+
+# Arch Linux
+sudo pacman -S tmux
+```
+
+Clone this repository to `~/.config/terminal`, then link the tracked Linux
+config to the location tmux reads by default:
+
+```sh
+mkdir -p ~/.config
+git clone https://github.com/nosabecom/terminaltings.git ~/.config/terminal
+ln -s ~/.config/terminal/.tmux.conf ~/.tmux.conf
+```
+
+If `~/.tmux.conf` already exists, move it aside before creating the link rather
+than overwriting it. Start or attach to a named session with:
+
+```sh
+tmux new-session -A -s work
+```
+
+Reload after an edit with `Home r` from inside tmux, or from a shell with:
+
+```sh
+tmux source-file ~/.tmux.conf
+```
+
+The Linux config uses `tmux-256color`, truecolor, mouse support, vi copy mode,
+and OSC 52 clipboard forwarding. The SSH client terminal must permit OSC 52 for
+copied text to reach its local clipboard. Hold `Shift` while dragging when the
+outside terminal supports it to bypass tmux mouse handling and select directly.
+
+## Windows PSMux setup
 
 Create `~/.config/psmux/psmux.conf` as a small loader:
 
 ```text
-source-file "~/.config/terminal/.tmux.conf"
+source-file "~/.config/terminal/.psmux.conf"
 ```
 
 psmux discovers that loader automatically. Reload a running server after
@@ -75,7 +118,7 @@ wheel-to-copy-mode are disabled so SSH programs such as `nvim`, `htop`,
 - Press `Page Up` or `Home [` to enter PSMux copy mode for pane history.
 - `pwsh-mouse-selection` remains enabled for convenient local PowerShell use.
 
-### PSMux cheat sheet
+### Shared tmux/PSMux cheat sheet
 
 `Prefix` below means press and release `Home`, then press the listed key.
 Press `Home Home` to send a literal Home key to the active program.
@@ -84,10 +127,10 @@ Press `Home Home` to send a literal Home key to the active program.
 
 | Command or key | Action |
 | --- | --- |
-| `psmux` | Start or attach to the default session |
-| `psmux new -s work` | Create a named session |
-| `psmux ls` | List sessions |
-| `psmux attach -t work` | Attach to a named session |
+| `tmux` / `psmux` | Start or attach to the default session |
+| `tmux new -s work` / `psmux new -s work` | Create a named session |
+| `tmux ls` / `psmux ls` | List sessions |
+| `tmux attach -t work` / `psmux attach -t work` | Attach to a named session |
 | `Prefix d` | Detach and leave the session running |
 | `Prefix s` | Open the session chooser |
 | `Prefix $` | Rename the current session |
@@ -141,5 +184,5 @@ Enter with `Page Up` or `Prefix [`.
 | Key | Action |
 | --- | --- |
 | `Prefix r` | Reload the tracked configuration |
-| `Prefix :` | Open the PSMux command prompt |
+| `Prefix :` | Open the tmux/PSMux command prompt |
 | `Prefix ?` | List all key bindings |
