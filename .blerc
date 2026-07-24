@@ -1,0 +1,13 @@
+# PSReadLine-like interactive behavior.
+bleopt complete_auto_complete=1
+bleopt complete_auto_history=1
+bleopt complete_auto_delay=0
+bleopt history_share=1
+
+# Show predictions immediately as muted text without a background highlight.
+ble-face -s auto_complete 'fg=242'
+
+# Keep the prompt clean; syntax highlighting communicates command validity.
+bleopt exec_errexit_mark=
+bleopt exec_elapsed_mark=
+bleopt prompt_eol_mark=

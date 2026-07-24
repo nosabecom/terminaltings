@@ -7,11 +7,35 @@ Personal terminal configuration shared across Windows and Linux machines.
 - `terminal.omp.json` — Oh My Posh theme, based on Atomic.
 - `powershell/profile.ps1` — shared PowerShell 7 profile.
 - `powershell/local.ps1` — optional untracked machine-specific settings.
+- `.blerc` — shared ble.sh configuration for Bash.
 - `.tmux.conf` — upstream-compatible tmux configuration for Linux.
 - `.psmux.conf` — Windows-specific PSMux configuration.
 
 The shared profile enables PSReadLine history/plugin predictions using its
 interactive ListView, and psmux is configured to preserve those settings.
+
+## Bash setup
+
+Install `ble.sh`, then link the tracked configuration to its default location:
+
+```sh
+# Ubuntu 26.04 or newer
+sudo apt install ble.sh
+ln -s ~/.config/terminal/.blerc ~/.blerc
+```
+
+Load `ble.sh` near the top of the interactive section in `~/.bashrc`, before
+prompt and completion setup:
+
+```sh
+source -- /usr/share/blesh/ble.sh --noattach
+```
+
+Attach it at the end of `~/.bashrc`, after prompt and completion setup:
+
+```sh
+[[ ${BLE_VERSION-} ]] && ble-attach
+```
 
 ## PowerShell setup
 
@@ -141,6 +165,7 @@ Press `Home Home` to send a literal Home key to the active program.
 | Key | Action |
 | --- | --- |
 | `F12` or `Prefix c` | Create a window in the current directory |
+| `Ctrl+0` through `Ctrl+9` | Select the corresponding numbered window without the prefix |
 | `Prefix n` / `Prefix p` | Next / previous window |
 | `Prefix l` | Return to the last window |
 | `Prefix 1` through `Prefix 9` | Select a numbered window |
