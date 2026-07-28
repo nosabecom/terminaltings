@@ -88,6 +88,34 @@ Reload after an edit with `Home r` from inside tmux, or from a shell with:
 tmux source-file ~/.tmux.conf
 ```
 
+### Linux session persistence
+
+The tmux configuration uses
+[tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) and
+[tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) to preserve
+sessions across restarts. Continuum saves the tmux environment every 15 minutes,
+restores the most recent snapshot when a new tmux server starts, and registers
+a user systemd service to start tmux at Linux boot.
+
+Install the plugin manager, then install the configured plugins:
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
+tmux source-file ~/.tmux.conf
+```
+
+On a systemd machine, user lingering must be enabled so tmux can start at boot
+without an interactive login:
+
+```sh
+sudo loginctl enable-linger "$USER"
+```
+
+Save immediately with `Home Ctrl-s` or restore manually with `Home Ctrl-r`.
+Automatic snapshots are stored under
+`${XDG_DATA_HOME:-~/.local/share}/tmux/resurrect/`.
+
 The Linux config uses `tmux-256color`, truecolor, mouse support, vi copy mode,
 and OSC 52 clipboard forwarding. The SSH client terminal must permit OSC 52 for
 copied text to reach its local clipboard. Hold `Shift` while dragging when the
