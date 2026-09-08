@@ -1,0 +1,56 @@
+{
+  "name": "terminal-things-earth",
+  "displayName": "Terminal Things — Earth",
+  "description": "True AMOLED black with Forest, Moss, or Sage green accents. Supports classic and Modern UI.",
+  "version": "0.1.0",
+  "publisher": "nosabecom",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "green",
+    "forest",
+    "moss",
+    "sage",
+    "amoled",
+    "black",
+    "dark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nosabecom/terminaltings.git",
+    "directory": "themes/earth"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "package": "npm run build && npm run check && vsce package --no-dependencies --out dist/terminal-things-earth-0.1.0.vsix"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Terminal Things Forest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/forest-color-theme.json"
+      },
+      {
+        "label": "Terminal Things Moss",
+        "uiTheme": "vs-dark",
+        "path": "./themes/moss-color-theme.json"
+      },
+      {
+        "label": "Terminal Things Sage",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sage-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "@vscode/vsce": "3.9.2"
+  }
+}

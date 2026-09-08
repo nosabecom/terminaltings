@@ -1,6 +1,12 @@
 # Nosa's stuff for dev
 This is Nosa's config files, AGENTS.md, CLAUDE.md and skills.
 
+## VS Code: Earth
+
+[Terminal Things — Earth](themes/earth/README.md) is an AMOLED black VS Code theme with Forest, Moss, and Sage green accents, matching terminal colors, and support for classic and Modern UI.
+
+![Earth accent options](themes/earth/preview/palette-board.png)
+
 ## Windows remote host: Godseye
 
 Godseye is configured to stay awake with the laptop lid closed and bring its

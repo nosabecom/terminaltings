@@ -1,0 +1,66 @@
+/* Shared palette; map these variables to the target app when integrating. */
+[data-earth-theme="forest"] {
+  color-scheme: dark;
+  --earth-bg: #000000;
+  --earth-panel: #000000;
+  --earth-raised: #101010;
+  --earth-hover: #191919;
+  --earth-border: #262626;
+  --earth-fg: #E5E5E5;
+  --earth-muted: #AAAAAA;
+  --earth-comment: #858585;
+  --earth-accent: #628F69;
+  --earth-onAccent: #000000;
+  --earth-selection: #203526;
+  --earth-red: #E49B91;
+  --earth-green: #ADC995;
+  --earth-yellow: #DDC58D;
+  --earth-blue: #A2BED0;
+  --earth-purple: #C7ADD1;
+  --earth-cyan: #95C8BC;
+  --earth-orange: #D9AD83;
+}
+
+[data-earth-theme="moss"] {
+  color-scheme: dark;
+  --earth-bg: #000000;
+  --earth-panel: #000000;
+  --earth-raised: #101010;
+  --earth-hover: #191919;
+  --earth-border: #262626;
+  --earth-fg: #E5E5E5;
+  --earth-muted: #AAAAAA;
+  --earth-comment: #858585;
+  --earth-accent: #95A96B;
+  --earth-onAccent: #000000;
+  --earth-selection: #303821;
+  --earth-red: #E49B91;
+  --earth-green: #ADC995;
+  --earth-yellow: #DDC58D;
+  --earth-blue: #A2BED0;
+  --earth-purple: #C7ADD1;
+  --earth-cyan: #95C8BC;
+  --earth-orange: #D9AD83;
+}
+
+[data-earth-theme="sage"] {
+  color-scheme: dark;
+  --earth-bg: #000000;
+  --earth-panel: #000000;
+  --earth-raised: #101010;
+  --earth-hover: #191919;
+  --earth-border: #262626;
+  --earth-fg: #E5E5E5;
+  --earth-muted: #AAAAAA;
+  --earth-comment: #858585;
+  --earth-accent: #C2D5B0;
+  --earth-onAccent: #000000;
+  --earth-selection: #2C3827;
+  --earth-red: #E49B91;
+  --earth-green: #ADC995;
+  --earth-yellow: #DDC58D;
+  --earth-blue: #A2BED0;
+  --earth-purple: #C7ADD1;
+  --earth-cyan: #95C8BC;
+  --earth-orange: #D9AD83;
+}

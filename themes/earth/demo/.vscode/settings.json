@@ -1,0 +1,10 @@
+{
+  "workbench.colorTheme": "Terminal Things Forest",
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 15,
+  "editor.lineHeight": 26,
+  "editor.fontLigatures": true,
+  "editor.renderLineHighlight": "all",
+  "workbench.tree.indent": 16,
+  "workbench.experimental.modernUI": true
+}

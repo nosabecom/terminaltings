@@ -1,0 +1,12 @@
+node_modules/**
+dist/**
+scripts/**
+palettes.json
+package-lock.json
+.vscode/**
+.gitignore
+exports/**
+preview/*.svg
+preview/forest.png
+preview/moss.png
+preview/sage.png
