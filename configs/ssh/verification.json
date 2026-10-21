@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-10-21",
+  "connections": [
+    {
+      "source": "godseye",
+      "target": "newera",
+      "user": "newera\\nomok",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "godseye",
+      "target": "shitbook",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "godseye",
+      "target": "ewaste",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "newera",
+      "target": "godseye",
+      "user": "godseye\\nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "newera",
+      "target": "shitbook",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "newera",
+      "target": "ewaste",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "shitbook",
+      "target": "godseye",
+      "user": "godseye\\nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "shitbook",
+      "target": "newera",
+      "user": "newera\\nomok",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "shitbook",
+      "target": "ewaste",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "ewaste",
+      "target": "godseye",
+      "user": "godseye\\nosa",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "ewaste",
+      "target": "newera",
+      "user": "newera\\nomok",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "source": "ewaste",
+      "target": "shitbook",
+      "user": "nosa",
+      "exit_code": 0,
+      "passed": true
+    }
+  ]
+}

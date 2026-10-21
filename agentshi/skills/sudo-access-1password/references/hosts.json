@@ -1,0 +1,13 @@
+{
+  "primary_machine": "newera",
+  "hosts": {
+    "shitbook": {
+      "ssh_user": "nosa",
+      "password_reference": "op://Private/shitbook sudo passwd/add more/password"
+    },
+    "ewaste": {
+      "ssh_user": "nosa",
+      "password_reference": "op://Private/ewaste sudo passwd/add more/password"
+    }
+  }
+}

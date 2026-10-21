@@ -1,0 +1,46 @@
+{
+  "primary_machine": "newera",
+  "vault": "Private",
+  "machines": {
+    "godseye": {
+      "user": "nosa",
+      "ip": "100.91.97.94",
+      "os": "windows",
+      "identity": "~/.ssh/mainting",
+      "public": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOR46iTF3ayPYbPd2ccJsbyteXktf3U+n60UjWte870",
+      "hostkey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILqvejOUqH76YRgyKR+bVc2yQaQ5NNxho6PGtGaKX8w6",
+      "vault_item_title": "Main Ting",
+      "vault_item_id": "htkdifukn6uhjk7vl5ikffnk7a"
+    },
+    "newera": {
+      "user": "nomok",
+      "ip": "100.120.15.18",
+      "os": "windows",
+      "identity": "~/.ssh/Sideting",
+      "public": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIInbRMBP+TP3yZUUIFN2G8ZUSJlQloqUXj05b/AUyfpa",
+      "hostkey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICLLZGBEZC8rA6lyPPggG06L9t2NYzvfMFnbLicArEVs",
+      "vault_item_title": "Side ting",
+      "vault_item_id": "zxth3fwlxmdp6cngwghpclegui"
+    },
+    "shitbook": {
+      "user": "nosa",
+      "ip": "100.66.126.73",
+      "os": "linux",
+      "identity": "~/.ssh/github_devbox",
+      "public": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIELfP1BfWjVPUe6ipCKDu4+gL4Toz4VspAWogJACQgwk",
+      "hostkey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOiexoGy9lbLFFjnB4FD3A6n+JsbEchAME0Jqz+hvCD9",
+      "vault_item_title": "Shitbook",
+      "vault_item_id": "zi2oc4lr6c6tuzkgkx3o4yo5we"
+    },
+    "ewaste": {
+      "user": "nosa",
+      "ip": "100.124.150.28",
+      "os": "linux",
+      "identity": "~/.ssh/mesh_ed25519",
+      "hostkey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO2SiGdGbZDp3mwS1jUeMuwlkkFBOyWAE9zWEMJOrmWA",
+      "public": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBE0/NE/78SRiyuD8m6Y02LCG3cTHRRLnaWTKWosG7PW",
+      "vault_item_id": "afqhdpiecoaz5aijj4x2illrcy",
+      "vault_item_title": "Ewaste"
+    }
+  }
+}

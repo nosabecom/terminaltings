@@ -1,0 +1,4 @@
+# Preserve the original machine snapshots, including their line endings.
+agentshi/audit/godseye.md -text
+agentshi/audit/newera.md -text
+agentshi/audit/shitbook.md -text

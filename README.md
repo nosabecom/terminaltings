@@ -1,6 +1,12 @@
 # Nosa's stuff for dev
 This is Nosa's config files, AGENTS.md, CLAUDE.md and skills.
 
+## Machine fleet and agent skills
+
+[Fleet setup](agentshi/FLEET.md) documents SSH access between Newera (the main PC),
+Godseye, Shitbook, and Ewaste. Public SSH configuration lives in `configs/ssh`;
+the maintained 1Password sudo-access skill lives in `agentshi/skills`.
+
 ## VS Code: Earth
 
 [Terminal Things — Earth](themes/earth/README.md) is an AMOLED black VS Code theme with Forest, Moss, and Sage green accents, matching terminal colors, and support for classic and Modern UI.
