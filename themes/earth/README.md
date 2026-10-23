@@ -47,8 +47,8 @@ References: [Microsoft's Modern UI theming documentation](https://github.com/mic
 Requires Node.js 22 or newer. Open this folder directly in VS Code and press F5 to inspect the theme in an Extension Development Host.
 
 ```powershell
-npm ci
-npm run package
+pnpm install --frozen-lockfile
+pnpm package
 ```
 
 Edit `palettes.json` for colors or `scripts/build.mjs` for UI mappings. Build generates the theme JSON, preview images, and reusable JSON/CSS tokens. Checks verify true-black main surfaces, accent mapping, terminal palette completeness, and at least 4.5:1 contrast for syntax, ordinary text, and button labels on their tested backgrounds.
