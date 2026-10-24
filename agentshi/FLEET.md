@@ -43,8 +43,8 @@ account, with permissions limited to SYSTEM and Administrators. Linux uses
 ## Sudo skill
 
 The maintained source is
-[skills/sudo-access-1password](skills/sudo-access-1password/SKILL.md). Matching copies
-are installed in each machine's `~/.codex/skills/sudo-access-1password` directory.
+[skills/accross-fleet](skills/across-fleet/SKILL.md). Matching copies
+are installed in each machine's `~/.codex/skills/across-fleet` directory.
 After editing the repo copy, update the installed copies too.
 
 Both Linux accounts already allow passwordless sudo. The skill preserves that

@@ -1,10 +1,5 @@
 # User preferences
 
-## Browser access: in-app browser first
-
-- Before trying desktop computer use for a browser task, first try the Codex in-app browser. Open the relevant site there when no suitable tab is already open; an empty tab list alone is not a reason to switch to desktop computer use.
-- Only consider desktop computer use after trying the in-app browser and identifying a concrete limitation.
-
 ## Schoolwork: check Blip downloads first
 
 - When the user asks to check or review something during school-related work (for example, "Can you check this for me?"), first look for their latest work received through Blip before asking them to attach it again.
@@ -19,10 +14,3 @@
 - Do not give the final answer, a complete worked solution, or a ready-to-submit response unless the user explicitly asks for the answer or solution to that question.
 - Asking for help, an explanation, feedback, or a hint does not by itself request the answer. Explain more when the user is confused, while preserving their opportunity to solve the problem.
 - An explicit request for an answer applies to that question; retain teaching mode for subsequent questions unless the user says otherwise.
-
-
-## Windows shell quoting
-
-Avoid nested shell commands for file deletion, especially PowerShell → cmd /c → rmdir. Use PowerShell's Remove-Item -LiteralPath with a single-quoted path or a path variable.
-
-PowerShell does not use backslash to escape quotes. Never use \" as a PowerShell quote escape. Do not interpolate deletion paths into command strings that another shell will parse.

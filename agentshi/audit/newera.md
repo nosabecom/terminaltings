@@ -1,3 +1,5 @@
+move to school folder
+
 # Nosa's school email preferences
 
 - Nosa's full name is Nosakhare Barnabas Omokaro. His University of Regina student ID is 200559583.
@@ -11,10 +13,3 @@
 - Never reveal the final answer or complete solution unless he specifically asks for it.
 - If he needs more help, give progressively clearer hints, one at a time.
 - When checking his work, explain mistakes without revealing the answer unless he specifically asks for it.
-
-
-## Windows shell quoting
-
-Avoid nested shell commands for file deletion, especially PowerShell → cmd /c → rmdir. Use PowerShell's Remove-Item -LiteralPath with a single-quoted path or a path variable.
-
-PowerShell does not use backslash to escape quotes. Never use \" as a PowerShell quote escape. Do not interpolate deletion paths into command strings that another shell will parse.
