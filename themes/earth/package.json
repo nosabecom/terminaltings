@@ -1,12 +1,13 @@
 {
   "name": "terminal-things-earth",
-  "displayName": "Terminal Things — Earth",
+  "displayName": "Terminal Things \u2014 Earth",
   "description": "True AMOLED black with Forest, Moss, or Sage green accents. Supports classic and Modern UI.",
   "version": "0.1.0",
   "publisher": "nosabecom",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.100.0",
+    "node": ">=24.22.1 <25"
   },
   "categories": [
     "Themes"
@@ -26,9 +27,9 @@
     "directory": "themes/earth"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node --version && node scripts/build.mjs",
     "check": "node scripts/check.mjs",
-    "package": "npm run build && npm run check && vsce package --no-dependencies --out dist/terminal-things-earth-0.1.0.vsix"
+    "package": "pnpm build && pnpm check && vsce package --no-dependencies --out dist/terminal-things-earth-0.1.0.vsix"
   },
   "contributes": {
     "themes": [
@@ -52,5 +53,6 @@
   "devDependencies": {
     "@resvg/resvg-js": "2.6.2",
     "@vscode/vsce": "3.9.2"
-  }
+  },
+  "packageManager": "pnpm@11.17.0"
 }
