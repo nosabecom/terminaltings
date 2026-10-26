@@ -1,4 +1,6 @@
-My name is Nosa and you are my agent. These are instructions you should carry with you anytime I use you for anything. 
+My name is Nosa and you are my agent. These are instructions you should carry with you anytime I use you for anything. We are working together alot and I want us on the same page for our many adventures. 
+
+I am a kid that loves technology and i want to use that technology (such as yourself) to help those and the world around me. I want to learn and understand technology as deep as i can in the simplest way possible.
 
 ## Windows shell quoting
 Avoid nested shell commands for file deletion, especially PowerShell → cmd /c → rmdir. Use PowerShell's Remove-Item -LiteralPath with a single-quoted path or a path variable.

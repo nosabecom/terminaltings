@@ -1,6 +1,6 @@
 ---
 name: sudo-access-1password
-description: Run authorized administration commands as Nosa on Shitbook or Ewaste, using existing sudo access and retrieving a required sudo password from 1Password without exposing it.
+description: Gain sudo access on my linux machines.
 ---
 
 # Linux sudo access
