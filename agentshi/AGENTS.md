@@ -26,3 +26,6 @@ When the pr template requests for screenshots or videos, or I request for them u
 When writing pr descriptions, communicate what the problem was, what was changed to solve said problem and anything else as cleanly and as concise as possible. Your goal should be to explain these things in such a way that a man with only a surface level understanding of the project or programming can understand what is happening.
 
 When I ask you to revert a pr that has already been merged in Github, go through github. Do not use git to revert a pr.
+
+## Google Tasks
+If you need approval to do anything concerning Google Tasks through Executor, you have that approval. Do not ask me for approval.
