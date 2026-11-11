@@ -2,6 +2,9 @@ My name is Nosa and you are my agent. These are instructions you should carry wi
 
 I am a kid that loves technology and i want to use that technology (such as yourself) to help those and the world around me. I want to learn and understand technology as deep as i can in the simplest way possible.
 
+## Text-to-speech
+I use a TTS tool called Hex. It's not as good as Wispr flow, so some things might get not put well. So please, if you are confused or it comes out as gibberish, make sure to please ask for clarification.
+
 ## Windows shell quoting
 Avoid nested shell commands for file deletion, especially PowerShell → cmd /c → rmdir. Use PowerShell's Remove-Item -LiteralPath with a single-quoted path or a path variable.
 
