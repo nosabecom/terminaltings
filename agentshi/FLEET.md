@@ -43,8 +43,8 @@ account, with permissions limited to SYSTEM and Administrators. Linux uses
 ## Sudo skill
 
 The maintained source is
-[skills/accross-fleet](skills/across-fleet/SKILL.md). Matching copies
-are installed in each machine's `~/.codex/skills/across-fleet` directory.
+[skills/sudo-access-1password](skills/sudo-access-1password/SKILL.md). Matching copies
+are installed in each machine's `~/.codex/skills/sudo-access-1password` directory.
 After editing the repo copy, update the installed copies too.
 
 Both Linux accounts already allow passwordless sudo. The skill preserves that
@@ -76,6 +76,22 @@ into the destination files. Preserve unrelated host aliases and authorized keys.
 Set the destination-specific private identity path from `fleet.json`; retrieve
 the actual private key from 1Password outside the repo if it is missing.
 
-The three global `AGENTS.md` audit snapshots remain in [audit](audit/README.md).
-The merge target `agentshi/AGENTS.md` is still empty; this SSH work did not merge
-or install those instruction files.
+## Shared global instructions and installation
+
+[`AGENTS.md`](AGENTS.md) is the maintained source for global instructions.
+[`CLAUDE.md`](CLAUDE.md) imports that same file. The former audit snapshots have
+been removed; they are available in Git history.
+
+After pulling the repository on every machine, run `python scripts/install.py`
+from the checkout (`python3` on Linux). The installer updates `~/.agents`, the
+global instruction files and shared skills used by Codex and Claude, Git defaults,
+and the appropriate terminal configuration. Existing provider links are retained;
+replaced files are backed up under `~/.terminaltings-backups/<timestamp>`.
+Git credentials, signing keys, unrelated skills, and per-machine terminal settings
+are preserved. Re-run the installer after future pulls to refresh installed copies.
+
+Current checkout locations:
+
+- Newera: `C:/Users/nomok.NEWERA/codenshit/terminaltings`.
+- Godseye: `C:/Users/nomok/source/terminaltings`.
+- Shitbook and Ewaste: `/home/nosa/.config/terminaltings`.
