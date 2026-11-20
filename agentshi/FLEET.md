@@ -44,8 +44,9 @@ account, with permissions limited to SYSTEM and Administrators. Linux uses
 
 The maintained source is
 [skills/sudo-access-1password](skills/sudo-access-1password/SKILL.md). Matching copies
-are installed in each machine's `~/.codex/skills/sudo-access-1password` directory.
-After editing the repo copy, update the installed copies too.
+are installed by `scripts/install.py` into `~/.agents`, Codex, Claude,
+Gemini/Antigravity (including T3 Code Antigravity), and OpenCode skill directories on
+each machine. After editing the repo copy, re-run the installer on each machine.
 
 Both Linux accounts already allow passwordless sudo. The skill preserves that
 policy and uses 1Password only when a password is needed. Its references point to
@@ -84,7 +85,8 @@ been removed; they are available in Git history.
 
 After pulling the repository on every machine, run `python scripts/install.py`
 from the checkout (`python3` on Linux). The installer updates `~/.agents`, the
-global instruction files and shared skills used by Codex and Claude, Git defaults,
+global instruction files and shared skills used by Codex, Claude, Gemini/Antigravity
+(including T3 Code Antigravity), and OpenCode, Git defaults,
 and the appropriate terminal configuration. Existing provider links are retained;
 replaced files are backed up under `~/.terminaltings-backups/<timestamp>`.
 Git credentials, signing keys, unrelated skills, and per-machine terminal settings

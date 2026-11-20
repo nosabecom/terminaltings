@@ -44,6 +44,13 @@ def git(*args):
     return subprocess.run(['git', *args], check=True, capture_output=True, text=True).stdout.strip()
 
 
+def t3_antigravity_homes():
+    root = HOME / '.t3' / 'userdata' / 'providers' / 'antigravity'
+    if not root.is_dir():
+        return []
+    return sorted(path for path in root.iterdir() if path.is_dir())
+
+
 def main():
     # Never initialize or place a checkout inside a cloud-sync directory.
     if any(name in str(ROOT).lower() for name in ('onedrive', 'google drive', 'dropbox')):
@@ -52,15 +59,36 @@ def main():
     for name in ('AGENTS.md', 'CLAUDE.md'):
         source = ROOT / 'agentshi' / name
         install(source, HOME / '.agents' / name)
-    for provider, name in (('.codex', 'AGENTS.md'), ('.claude', 'AGENTS.md'), ('.claude', 'CLAUDE.md')):
-        install(ROOT / 'agentshi' / name, HOME / provider / name)
+
+    antigravity_homes = t3_antigravity_homes()
+    instruction_targets = [
+        (HOME / '.codex' / 'AGENTS.md', 'AGENTS.md'),
+        (HOME / '.claude' / 'AGENTS.md', 'AGENTS.md'),
+        (HOME / '.claude' / 'CLAUDE.md', 'CLAUDE.md'),
+        (HOME / '.gemini' / 'AGENTS.md', 'AGENTS.md'),
+        (HOME / '.config' / 'opencode' / 'AGENTS.md', 'AGENTS.md'),
+    ]
+    for antigravity_home in antigravity_homes:
+        instruction_targets.append((antigravity_home / 'AGENTS.md', 'AGENTS.md'))
+    for target, name in instruction_targets:
+        install(ROOT / 'agentshi' / name, target)
+
+    skill_roots = [
+        HOME / '.agents' / 'skills',
+        HOME / '.codex' / 'skills',
+        HOME / '.claude' / 'skills',
+        HOME / '.gemini' / 'config' / 'skills',
+        HOME / '.config' / 'opencode' / 'skills',
+    ]
+    for antigravity_home in antigravity_homes:
+        skill_roots.append(antigravity_home / 'config' / 'skills')
 
     for source in sorted((ROOT / 'agentshi' / 'skills').rglob('*')):
         if not source.is_file() or '__pycache__' in source.parts or source.suffix == '.pyc':
             continue
         relative = source.relative_to(ROOT / 'agentshi' / 'skills')
-        for directory in ('.agents', '.codex', '.claude'):
-            install(source, HOME / directory / 'skills' / relative)
+        for skill_root in skill_roots:
+            install(source, skill_root / relative)
 
     # Include the repository defaults before local settings so local credentials
     # and signing configuration keep their existing precedence.

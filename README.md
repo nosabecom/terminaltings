@@ -5,7 +5,8 @@ The shared global instructions are maintained in
 [`agentshi/AGENTS.md`](agentshi/AGENTS.md). From a checkout outside OneDrive or
 other sync folders, run `python scripts/install.py` on Windows or
 `python3 scripts/install.py` on Linux after pulling changes. The installer updates
-the global Codex and Claude instructions, shared skills, Git defaults, and the
+the global Codex, Claude, Gemini/Antigravity (including T3 Code Antigravity), and
+OpenCode instructions, shared skills, Git defaults, and the
 terminal settings for that operating system. It backs up replaced files under
 `~/.terminaltings-backups` and preserves local Git credentials and signing settings.
 
