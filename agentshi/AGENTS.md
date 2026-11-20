@@ -21,6 +21,9 @@ Before trying desktop computer use for a browser task, first try the in-app brow
 
 If you are on Windows and hit a bot challenge you cannot solve, open it in the Helium browser. If you cannot see Helium open, it is likely already open. Kill it and reopen it. 
 
+## Desktop computer use
+Use Cua (`cua-driver` MCP/CLI) for all native desktop automation on this machine—prefer background mode (`delivery_mode: "background"` and `element_token` snapshots) so you don't steal my cursor or window focus, and use Cua Spaces (`cua` MCP/CLI) whenever a task needs an isolated sandbox or remote desktop.
+
 ## Pull Requests (PR)
 When I ask you to spin up a pr for something we are working on, make sure to follow the pr template included in the repository fervently. Do not deviate from it. Never open it as a draft. Also, add a line at the end that says which model this was created with. 
 
